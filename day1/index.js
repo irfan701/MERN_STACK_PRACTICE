@@ -51,6 +51,12 @@ app.get('/five',(req,res)=>{
     res.json(objArray);
 })
 
+//Response Download
+
+app.get('/live',(req,res)=>{
+    res.download('./uploads/tt.png');
+})
+
 app.listen(4000,()=>{
     console.log(`Server Run Success ${4000}`)
 })
