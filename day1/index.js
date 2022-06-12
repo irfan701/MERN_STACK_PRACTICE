@@ -67,6 +67,19 @@ app.get('/bd',(req,res)=>{
 app.get('/in',(req,res)=>{
     res.end("This is India")
 })
+
+
+//Response Header
+
+app.get('/six',(req,res)=>{
+
+    res.append("name","Irfan")
+    res.append("age","20")
+    res.append("city","ctg")
+    res.status(201).end("Created ...Hello world")
+})
+
+
 app.listen(4000,()=>{
     console.log(`Server Run Success ${4000}`)
 })
