@@ -78,7 +78,13 @@ app.get('/six',(req,res)=>{
     res.append("city","ctg")
     res.status(201).end("Created ...Hello world")
 })
+app.get('/seven',(req,res)=>{
 
+    res.cookie("name","Irfan")
+    res.cookie("age","20")
+    res.cookie("city","ctg")
+    res.end("Cookie Set Success !!")
+})
 
 app.listen(4000,()=>{
     console.log(`Server Run Success ${4000}`)
