@@ -57,6 +57,16 @@ app.get('/live',(req,res)=>{
     res.download('./uploads/tt.png');
 })
 
+//Response Redirect
+
+
+app.get('/bd',(req,res)=>{
+  res.redirect('http://localhost:4000/in')
+})
+
+app.get('/in',(req,res)=>{
+    res.end("This is India")
+})
 app.listen(4000,()=>{
     console.log(`Server Run Success ${4000}`)
 })
