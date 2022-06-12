@@ -39,6 +39,17 @@ app.post('/four',(req,res)=>{
     res.status("201").end('Created...');
 })
 
+//Response Json
+
+
+var objArray=[
+    {name:"Irfan", age:21},
+    {name:"Atif Aslam", age:40},
+    {name:"Sazia", age:30},
+]
+app.get('/five',(req,res)=>{
+    res.json(objArray);
+})
 
 app.listen(4000,()=>{
     console.log(`Server Run Success ${4000}`)
