@@ -86,6 +86,15 @@ app.get('/seven',(req,res)=>{
     res.end("Cookie Set Success !!")
 })
 
+app.get('/eight',(req,res)=>{
+
+    res.clearCookie("name")
+    res.clearCookie("age")
+
+    res.end("Cookie Clear Success !!")
+})
+
+
 app.listen(4000,()=>{
     console.log(`Server Run Success ${4000}`)
 })
